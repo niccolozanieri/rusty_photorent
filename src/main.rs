@@ -1,3 +1,5 @@
+use crate::camera_brand::CameraBrand;
+
 mod camera;
 mod lens;
 mod photorent_shop;
@@ -7,7 +9,7 @@ mod lens_brand;
 fn main() {
     let camera = camera::Camera {
         model: String::from("a7"),
-        brand: String::from("Sony"),
+        brand: CameraBrand::SONY,
         ..Default::default()
     };
 

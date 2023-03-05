@@ -1,8 +1,10 @@
 use std::fmt;
+use crate::camera_brand::CameraBrand;
+use CameraBrand::*;
 
 pub struct Camera {
     pub model: String,
-    pub brand: String,
+    pub brand: CameraBrand,
     pub price_per_hour: f32,
 }
 
@@ -10,7 +12,7 @@ impl Default for Camera {
     fn default() -> Self {
         Self {
             model: String::from(""),
-            brand: String::from(""),
+            brand: UNKNOWN,
             price_per_hour: 20f32,
         }
     }
