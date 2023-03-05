@@ -1,6 +1,8 @@
 mod camera;
 mod lens;
 mod photorent_shop;
+mod camera_brand;
+mod lens_brand;
 
 fn main() {
     let camera = camera::Camera {
