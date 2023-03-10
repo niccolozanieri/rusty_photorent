@@ -1,10 +1,11 @@
 use std::fmt;
 
-enum LensBrand {
+pub(crate) enum LensBrand {
     SONY,
     NIKON,
     CANON,
     LEICA,
+    UNKNOWN,
 }
 
 impl std::fmt::Display for LensBrand {
@@ -12,6 +13,7 @@ impl std::fmt::Display for LensBrand {
         let value: String;
         match *self {
             LensBrand::LEICA => value = String::from("Leica"),
+            LensBrand::UNKNOWN => value = String::from("Unknown"),
             LensBrand::SONY => value = String::from("Sony"),
             LensBrand::CANON => value = String::from("Canon"),
             LensBrand::NIKON => value = String::from("Nikon"),
