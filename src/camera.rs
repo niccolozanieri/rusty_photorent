@@ -3,11 +3,24 @@ use crate::camera_brand::CameraBrand;
 use CameraBrand::*;
 
 pub struct Camera {
-    pub model: String,
-    pub brand: CameraBrand,
-    pub price_per_hour: f32,
+    model: String,
+    brand: CameraBrand,
+    price_per_hour: f32,
 }
 
+impl Camera {
+    pub fn new(model: String, brand: CameraBrand, price_per_hour: f32) -> Self {
+        Self {
+            model,
+            brand,
+            price_per_hour
+        }
+    }
+
+    pub fn get_model(&self) -> &String {
+        &self.model
+    }
+}
 impl Default for Camera {
     fn default() -> Self {
         Self {

@@ -1,20 +1,12 @@
-use crate::camera_brand::CameraBrand;
-
 mod camera;
 mod lens;
 mod photorent_shop;
 mod camera_brand;
 mod lens_brand;
 
+use crate::camera_brand::CameraBrand;
+use crate::camera::Camera;
+
 fn main() {
-    let camera = camera::Camera {
-        model: String::from("a7"),
-        brand: CameraBrand::SONY,
-        ..Default::default()
-    };
-
-    let lens = lens::Lens::default();
-
-    println!("{}", camera);
-    println!("{}", lens);
+    let a7 = camera::Camera::new("a7".to_string(), CameraBrand::SONY, 20f32);
 }
