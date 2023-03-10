@@ -2,12 +2,12 @@ use crate::lens_brand::LensBrand;
 use std::fmt;
 
 pub struct Lens {
-    pub model: String,
-    pub brand: LensBrand,
-    pub focal_length: u8,
-    pub min_aperture: f32,
-    pub max_aperture: f32,
-    pub price_per_hour: f32,
+    model: String,
+    brand: LensBrand,
+    focal_length: u8,
+    min_aperture: f32,
+    max_aperture: f32,
+    price_per_hour: f32,
 }
 
 impl Lens {
@@ -40,14 +40,14 @@ impl Default for Lens {
 impl fmt::Display for Lens {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let model_brand_fl = format!(
-            "Model: {}  Brand: {} Focal Length: {}",
+            "Series: {}\n   Brand: {}\n   Focal Length: {}\n ",
             self.model,
             self.brand,
             self.focal_length
         );
 
         let min_max_price = format!(
-            "Min Aperture:  {}  Max Aperture: {}  Price Per Hour: {}",
+            "Min Aperture:  {}\n   Max Aperture: {}\n   Price Per Hour: {}$ ",
             self.min_aperture,
             self.max_aperture,
             self.price_per_hour

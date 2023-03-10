@@ -1,6 +1,6 @@
 use std::fmt;
 
-pub(crate) enum LensBrand {
+pub enum LensBrand {
     SONY,
     NIKON,
     CANON,

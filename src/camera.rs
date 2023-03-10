@@ -33,6 +33,6 @@ impl Default for Camera {
 
 impl fmt::Display for Camera {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "Model: {}  Brand: {}  Price Per Hour: {}", self.model, self.brand, self.price_per_hour)
+        write!(f, "Model: {}\n   Brand: {}\n   Price Per Hour: {}$", self.model, self.brand, self.price_per_hour)
     }
 }
