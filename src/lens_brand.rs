@@ -1,14 +1,22 @@
+use std::fmt;
+
 enum LensBrand {
-    SONY(String),
-    NIKON(String),
-    CANON(String),
-    SAMYANG(String),
-    LEICA(String),
-    SIGMA(String),
-    ZEISS(String),
-    TOKINA(String),
-    FUJIFILM(String),
-    PENTAX(String),
-    OLYMPUS(String),
-    PANASONIC(String)
+    SONY,
+    NIKON,
+    CANON,
+    LEICA,
+}
+
+impl std::fmt::Display for LensBrand {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        let value: String;
+        match *self {
+            LensBrand::LEICA => value = String::from("Leica"),
+            LensBrand::SONY => value = String::from("Sony"),
+            LensBrand::CANON => value = String::from("Canon"),
+            LensBrand::NIKON => value = String::from("Nikon"),
+        };
+        write!(f, "{}", value)
+
+    }
 }

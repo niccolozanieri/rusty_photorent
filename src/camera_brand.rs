@@ -13,8 +13,8 @@ impl std::fmt::Display for CameraBrand {
         match *self {
             CameraBrand::UNKNOWN => value = String::from("Unknown"),
             CameraBrand::SONY => value = String::from("Sony"),
-            CameraBrand::CANON => value = String::from("Unknown"),
-            CameraBrand::NIKON => value = String::from("Unknown"),
+            CameraBrand::CANON => value = String::from("Canon"),
+            CameraBrand::NIKON => value = String::from("Nikon"),
         };
         write!(f, "{}", value)
 
